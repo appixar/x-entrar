@@ -1,0 +1,10 @@
+#································
+# Entrar.app settings
+#································
+ENTRAR:
+  SUBDOMAIN: leilao1
+  JWT_SECRET: <ENV.JWT_SECRET>
+  APP_ID: <ENV.APP_ID>
+  API_KEY: <ENV.API_KEY>
+  URL:
+    LOGIN_SUCCESS: /account
