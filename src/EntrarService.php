@@ -110,8 +110,10 @@ class EntrarService extends Services
     {
         // Coming from entrar.app ?
         $referrer = @$_SERVER['HTTP_REFERER'];
-        $domain = parse_url($referrer, PHP_URL_HOST);
-        if ($domain !== "{$this->subdomain}.entrar.app") die('Invalid referrer');
+        if ($referrer) {
+            $domain = @parse_url($referrer, PHP_URL_HOST);
+            //if ($domain !== "{$this->subdomain}.entrar.app") die('Invalid referrer');
+        }
 
         // Check Post
         if (@!$_POST['access_token']) die('Data not found');
